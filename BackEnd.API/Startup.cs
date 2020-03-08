@@ -39,6 +39,7 @@ namespace BackEnd.API
 
             //Creates one instance for each request. Similar to singleton but contained in the scope
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options => 
                     {
