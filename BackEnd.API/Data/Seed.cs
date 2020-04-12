@@ -13,6 +13,7 @@ namespace BackEnd.API.Data
         {
             if (!context.Users.Any())
             {
+                System.Diagnostics.Debug.WriteLine("WORKING");
                 var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
 
                 var users = JsonConvert.DeserializeObject<List<User>>(userData);

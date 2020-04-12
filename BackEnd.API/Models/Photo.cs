@@ -10,7 +10,7 @@ namespace BackEnd.API.Models
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
 
-        // Adding this to the Photos, means when user is deleted all its photos will be deleted.
+        // Adding this to the Photos, means when user is deleted all its photos will be deleted. NAVIGATION PROPERTY
         public User User { get; set; }
         public int UserId { get; set; }
     }
