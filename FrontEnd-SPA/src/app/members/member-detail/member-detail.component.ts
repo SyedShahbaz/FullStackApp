@@ -15,6 +15,7 @@ export class MemberDetailComponent implements OnInit {
   user: User;
   // galleryOptions: NgxGalleryOptions[];
   // galleryImages: NgxGalleryImage[];
+  galleryImages: string;
   constructor(private userService: UserService,
               private alertify: AlertifyService,
               private route: ActivatedRoute) { }
@@ -34,21 +35,21 @@ export class MemberDetailComponent implements OnInit {
     //     preview: false,
     //   }
     // ];
-    // this.galleryImages = this.getImages();
+    this.galleryImages = this.getImages();
 
   }
 
   getImages() {
     const imageURl = [];
-    for (const photo of this.user.photos) {
-      imageURl.push({
-        small: photo.url,
-        medium: photo.url,
-        big: photo.url,
-        descriptiopn: photo.description
-      });
-      return imageURl;
-    }
+    // for (const photo of this.user.photos) {
+    //   imageURl.push({
+    //     small: photo.url,
+    //     medium: photo.url,
+    //     big: photo.url,
+    //     descriptiopn: photo.description
+    //   });
+    return this.user.photoURL;
+
   }
 
   // loadUser() {

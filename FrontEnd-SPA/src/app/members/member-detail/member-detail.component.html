@@ -62,7 +62,9 @@
           </tab>
           <tab heading = "Photos">
             <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery> -->
-            <p>Photos..</p>
+            <app-member-pictures 
+              [images] = "galleryImages">
+            </app-member-pictures>
           </tab>
           <tab heading="Messages">
             <p>Message...</p>

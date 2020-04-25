@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 
 
 @Injectable()
-export class MemberListResolver implements Resolve<User[]>{
+export class MemberListResolver implements Resolve<User[]> {
 
     /**
      *
@@ -23,6 +23,6 @@ export class MemberListResolver implements Resolve<User[]>{
                 this.router.navigate(['/home']);
                 return of(null);
             })
-        )
+        );
     }
 }
